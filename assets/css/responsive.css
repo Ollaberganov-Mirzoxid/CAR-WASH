@@ -1,0 +1,68 @@
+/* Kichik ekranlarda sidebarni yashirish */
+@media (max-width: 992px) {
+    .navbar-in-left {
+        width: auto;
+    }
+
+    .navbar-in-left img {
+        display: none;
+    }
+
+    .navbar-in-center {
+        width: 200px;
+    }
+
+    .navbar-in-right {
+        width: auto;
+    }
+
+    .sidebar {
+        left: -250px;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .main-content {
+        left: 20px;
+        right: 20px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .user-about {
+        display: none;
+        /* faqat user rasmi qolsin */
+    }
+
+    .user-img img {
+        margin: 10px;
+    }
+
+    .badge {
+        width: 100%;
+    }
+
+    .footer {
+        left: 0px;
+        width: 100%;
+    }
+}
+
+table td,
+table th {
+    white-space: nowrap;
+    /* yozuvni bo‘lmasdan bitta qatorda chiqaradi */
+}
+
+table,
+th,
+td {
+    border: 1px solid #444 !important;
+    /* chiziqlar ko‘rinadi */
+    border-collapse: collapse;
+}

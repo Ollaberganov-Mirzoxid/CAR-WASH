@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      background-color: #070d0e;
+      color: #fff;
+    }
+    .card {
+      background-color: #12181a;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+    }
+    .card h5, .card p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-dark px-3">
+    <span class="navbar-brand">🚗 Car Wash SaaS</span>
+    <button class="btn btn-sm btn-outline-light">Logout</button>
+  </nav>
+
+  <div class="container-fluid mt-4">
+    <div class="row g-3">
+
+      <!-- Orders statistikasi -->
+      <div class="col-md-2">
+        <div class="card p-3 text-center">
+          <h5 class="text-light">🆕 New</h5>
+          <p class="fs-3">12</p>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card p-3 text-center">
+          <h5 class="text-light">⏳ In Progress</h5>
+          <p class="fs-3">7</p>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card p-3 text-center">
+          <h5 class="text-light">✅ Done</h5>
+          <p class="fs-3">30</p>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card p-3 text-center">
+          <h5 class="text-light">💵 Paid</h5>
+          <p class="fs-3">28</p>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card p-3 text-center">
+          <h5 class="text-light">❌ Canceled</h5>
+          <p class="fs-3">3</p>
+        </div>
+      </div>
+
+      <!-- Revenue Chart -->
+      <div class="col-md-8">
+        <div class="card p-3">
+          <h5 class="text-light">📈 Revenue (This Week)</h5>
+          <canvas id="revenueChart" height="120"></canvas>
+        </div>
+      </div>
+
+      <!-- Services Chart -->
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h5 class="text-light">🛠 Top Services</h5>
+          <canvas id="servicesChart" height="120"></canvas>
+        </div>
+      </div>
+
+      <!-- Latest Orders -->
+      <div class="col-md-12">
+        <div class="card p-3">
+          <h5>📝 Latest Orders</h5>
+          <table class="table table-dark table-striped mt-3">
+            <thead>
+              <tr>
+                <th>Ticket No</th>
+                <th>Car</th>
+                <th>Service</th>
+                <th>Status</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#1001</td>
+                <td>01A123BC</td>
+                <td>Oddiy Yuvish</td>
+                <td><span class="badge bg-success">Paid</span></td>
+                <td>20 000 so'm</td>
+              </tr>
+              <tr>
+                <td>#1002</td>
+                <td>85B456DE</td>
+                <td>Ichki Tozalash</td>
+                <td><span class="badge bg-warning">In Progress</span></td>
+                <td>50 000 so'm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Revenue Chart (Line)
+    const ctx1 = document.getElementById('revenueChart');
+    new Chart(ctx1, {
+      type: 'line',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+          label: 'UZS',
+          data: [120000, 150000, 80000, 200000, 170000, 220000, 300000],
+          borderColor: 'rgb(75, 192, 192)',
+          tension: 0.4,
+          fill: true,
+          backgroundColor: 'rgba(75, 192, 192, 0.2)'
+        }]
+      }
+    });
+
+    // Services Chart (Pie)
+    const ctx2 = document.getElementById('servicesChart');
+    new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels: ['Oddiy Yuvish', 'Polirovka', 'Ichki Tozalash'],
+        datasets: [{
+          label: 'Orders',
+          data: [120, 50, 30],
+          backgroundColor: ['#36A2EB', '#FF6384', '#FFCE56']
+        }]
+      }
+    });
+  </script>
+</body>
+</html>

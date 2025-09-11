@@ -1,0 +1,119 @@
+*{
+    font-family: Roboto, sans-serif;
+}
+
+/*COLORS*/
+.bg-gradient-blues {
+    background: linear-gradient(to right, #56ccf2, #2f80ed) !important;
+}
+
+.bg-gradient-burning {
+    background: linear-gradient(to right, #ff416c, #ff4b2b) !important;
+}
+
+.bg-gradient-ohhappiness {
+    background: linear-gradient(45deg, #00b09b, #96c93d) !important;
+}
+
+.bg-gradient-orange {
+    background: linear-gradient(45deg, #fc4a1a, #f7b733) !important;
+}
+
+.bg-darks{
+    background: #12181a !important;
+}
+
+.bg-orange{
+    background: orange;
+}
+
+.bg-green{
+    background: green;
+}
+
+.bg-blue{
+    background: blue;
+}
+
+.bg-red{
+    background: red;
+}
+
+.text-gray-light {
+    color: #a8adb0 !important;
+}
+
+.text-gray-dark {
+    color: #91949f !important;
+}
+
+
+
+.stats-cards {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.box-1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 32%;
+    align-items: center;
+    color: #fff;
+    background-color: black;
+}
+
+.widgets-icons-2 {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ededed;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+.font-14{
+    font-size: 14px;
+}
+
+.font-13{
+    font-size: 13px;
+}
+
+.radius-10{
+    border-radius: 10px;
+}
+
+.cards{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.charts{
+    gap: 20px;
+}
+
+.border-gray{
+    border: 1px solid rgb(255 255 255 / 12%);
+    width: 100%;
+}
+
+.card-body{
+    flex-wrap: wrap;
+    gap: 20px;
+    color: #fff;
+}
+
+.row{
+    --bs-gutter-x: 0 !important;
+}
+
+.badge{
+    font-size: 14px !important;
+    width: 70%;
+    font-weight: bold;
+}
