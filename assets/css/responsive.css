@@ -1,5 +1,9 @@
 /* Kichik ekranlarda sidebarni yashirish */
 @media (max-width: 992px) {
+    .col{
+        flex: auto;
+    }
+
     .navbar-in-left {
         width: auto;
     }
