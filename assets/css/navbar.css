@@ -18,7 +18,7 @@ body {
 
 .navbar-in-left {
     display: flex;
-    width: 250px;
+    width: 17%;
     background-color: #12181a;
     height: 100%;
     border-right: 1px solid rgb(255 255 255 / 12%);
@@ -32,7 +32,7 @@ body {
 }
 
 .navbar-in-center{
-    width: 1000px;
+    width: 65%;
 }
 
 .navbar-in-center .d-flex{
@@ -69,7 +69,7 @@ body {
 
 .navbar-in-right {
     display: flex;
-    width: 240px;
+    width: 16%;
     background-color: #12181a;
     height: 100%;
     border-left: 1px solid rgb(255 255 255 / 12%);
@@ -107,7 +107,7 @@ body {
 }
 
 .sidebar {
-    width: 250px;
+    width: 17%;
     height: 100%;
     position: fixed;
     top: 61px;

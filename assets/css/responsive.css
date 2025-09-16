@@ -5,7 +5,7 @@
     }
 
     .navbar-in-left {
-        width: auto;
+        width: 12%;
     }
 
     .navbar-in-left img {
@@ -13,11 +13,11 @@
     }
 
     .navbar-in-center {
-        width: 230px;
+        width: 65%;
     }
 
     .navbar-in-right {
-        width: auto;
+        width: 15%;
     }
 
     .sidebar {
